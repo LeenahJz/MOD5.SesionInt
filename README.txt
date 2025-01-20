@@ -1,0 +1,100 @@
+[SESIÓN INTERACTIVA DE PREGUNTAS Y RESPUESTAS: INTRO TYPESCRIPT EN REACTJS, MODULO 5]
+
+Este sesión consiste en la realización de actividades que discute conceptos fundamentales de Typescript en ReactJS.
+
+[GITHUB: https://github.com/LeenahJz/EJERCICIOPRAC1.git]
+
+
+
+1. Preguntas teóricas sobre typescript 
+-¿Qué es TypeScript y para qué se utiliza?
+R: ES un lenguaje de programación orientado a los objetos, debe ser compilado y sus variables necesitan tener un tipado estático. Además, tiene un manejo de los errores más prolijo. Se puede utilizar en proyectos a gran escala que requieran una buena estructuración del código y también por su buen manejos de errores, puede prevenir bugs.
+
+2. ¿Cuáles son las principales diferencias entre TypeScript y JavaScript?
+R: Muchos programadores convergen en que Typescript es JavaScript, pero que simplemente tiene reglas de escritura mucho más estrictas. Las diferencias que tienen son que TypeScript necesita compilación, requiere un tipado estático, soporta modularización, manejo de errores. Por otro lado, JavaScript no se compila, no maneja errores durante la compilación, no soporta modularización, y es de un tipado dinámico.
+ 
+3. ¿Por qué es útil TypeScript en el desarrollo de aplicaciones ReactJS?
+R: Es mejor utilizarlo en  proyectos grandes para hacerlos organizados y manejables. TypeScript también se ejecuta más rápido porque el compilador se encarga de esa optimización, lo cual reduce el tiempo de manejo de errores y así, a grandes rasgos mejora la velocidad de la aplicación. Este código también puede ser más predictivo, fácil de mantener y así reducir el costo de un proyecto.
+4. ¿Qué es el sistema de tipos en TypeScript y cómo ayuda a evitar errores en
+tiempo de desarrollo?
+R:  Es el tipado que se maneja al momento de escribir el código, en TypeScript se utiliza uno estatico, el cual te obliga a definir en tu código que tipo de datos debe esperar. Gracias al tipeado estático, se puede detectar error más fácilmente. 
+
+
+PARA EL EJERCICIO PRÁCTICO SE INCURRE EN EL CÓDIGO CON LA SIGUIENTE
+Estructura
+
+mod5.ej1
+├── node_Modules
+├── public
+│   └── vite.svg
+├── src
+│   ├── assets
+│   │   └── react.svg
+│   ├── classes
+│   │   └── Doctor.tx
+│   ├── components
+│   │   └── DoctorCard.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── Context.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
+
+
+
+
+2. Ejercicio Práctico: Definiendo Tipos e Inferencia
+
+Para mostrar los datos de los doctores se utilizaron los siguientes tipados
+----> 
+//definiendo la interfaz para los doctores
+interface Doctor {
+    id: number;
+    name: string;
+    specialty: string;
+    experience?: string;
+    image: string;
+}
+
+
+3. Definición de Interfaces y Clases en TypeScript
+
+Se creo la clase Doctor.ts para después instanciarla.
+
+class Doctor {
+    id: number;
+    name: string;
+    specialty: string;
+    experience?: string;
+    image: string;
+
+    constructor(id: number, name: string, specialty: string, image: string, experience?: string) {
+        this.id = id;
+        this.name = name;
+        this.specialty = specialty;
+        this.experience = experience;
+        this.image = image;
+    }
+}
+
+export default Doctor;
+
+
+4. TypeScript y ReactJS: Implementación Básica en un Componente
+
+En DoctorCard.tsx implementan los props.
+//se define props del componente DoctorCard
+interface DoctorCardProps {
+    doctors: Doctor[];
+}
+
+5. Ventajas de TypeScript en el Desarrollo con ReactJS
+RESP: Utilizar Typescript te previene varios errores que se puedan mientras se escribe el código, también te ayuda a tenerlo mejor organizado y más prolijo.
