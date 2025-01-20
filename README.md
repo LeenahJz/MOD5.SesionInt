@@ -95,7 +95,7 @@ interface DoctorCardProps {
 RESP: Utilizar Typescript te previene varios errores que se puedan mientras se escribe el código, también te ayuda a tenerlo mejor organizado y más prolijo.
 
 ```js
-mport DoctorCard from "./components/DoctorCard";
+import DoctorCard from "./components/DoctorCard";
 import React, { useEffect, useRef, useState } from "react";
 import Doctor from "./classes/Doctor";
 
